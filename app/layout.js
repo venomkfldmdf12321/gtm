@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Head from 'next/head'
 import Script from 'next/script'
 
 
@@ -14,9 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-349WXKM3WE"></script>
-<script>
+      <head>
+<Script async src="https://www.googletagmanager.com/gtag/js?id=G-349WXKM3WE"></Script>
+<Script>
   {`
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -24,9 +23,9 @@ export default function RootLayout({ children }) {
 
   gtag('config', 'G-349WXKM3WE');
   `}
-</script>
+</Script>
 
-<Script id="clarity-script" strategy="afterInteractive">
+<Script type="text/javascript">
 {`
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -36,7 +35,7 @@ export default function RootLayout({ children }) {
 `}
 </Script>
 
-      </Head>
+      </head>
       <body className={inter.className}>
         {children}
         </body>
