@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from 'next/head'
+import Script from 'next/script'
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,7 +26,7 @@ export default function RootLayout({ children }) {
   `}
 </script>
 
-<script type="text/javascript">
+<Script id="clarity-script" strategy="afterInteractive">
 {`
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "m3k8m9cp1x");
 `}
-</script>
+</Script>
 
       </Head>
       <body className={inter.className}>
