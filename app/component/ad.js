@@ -8,7 +8,7 @@ const ContentWithAds = () => {
 
     useEffect(() => {
         // Fetch the HTML file containing content with placeholders for ad tags
-        fetch('../../blogs/abc.html')
+        fetch('../../blogs/abc')
             .then(response => response.text())
             .then(html => {
                 // Define your ad tags
